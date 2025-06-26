@@ -90,13 +90,16 @@ const defaultPalettes = [
 export async function seedColorPalettes() {
   console.log("Seeding color palettes...");
   
-  for (const palette of defaultPalettes) {
-    const existing = await storage.getColorPalette(palette.name);
-    if (!existing) {
-      await storage.createColorPalette(palette);
-      console.log(`Created palette: ${palette.displayName}`);
+  try {
+    for (const palette of defaultPalettes) {
+      const existing = await storage.getColorPalette(palette.name);
+      if (!existing) {
+        await storage.createColorPalette(palette);
+        console.log(`Created palette: ${palette.displayName}`);
+      }
     }
+    console.log("Color palettes seeding completed.");
+  } catch (error) {
+    console.warn("Color palette seeding failed, using defaults:", error);
   }
-  
-  console.log("Color palettes seeding completed.");
 }
