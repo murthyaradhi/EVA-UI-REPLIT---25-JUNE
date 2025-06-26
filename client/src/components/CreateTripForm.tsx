@@ -1,14 +1,14 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { Calendar, Users, Building, MapPin, Plane, Car, Utensils, Coffee, Briefcase, UserPlus, Clock, CheckCircle, AlertCircle, Sparkles } from 'lucide-react';
-import FormField from './FormField';
-import DatePicker, { DatePickerRef } from './DatePicker';
-import SearchableDropdown, { SearchableDropdownRef } from './SearchableDropdown';
-import TravelerDetails from './TravelerDetails';
-import GuestTravelerManager from './GuestTravelerManager';
-import FlightSearch from './FlightSearch';
-import FlightSearchModal from './FlightSearchModal';
-import HotelSearchModal from './HotelSearchModal';
-import TripConflictModal from './TripConflictModal';
+import FormField from '../../../FormField';
+import DatePicker, { DatePickerRef } from '../../../DatePicker';
+import SearchableDropdown, { SearchableDropdownRef } from '../../../SearchableDropdown';
+import TravelerDetails from '../../../TravelerDetails';
+import GuestTravelerManager from '../../../GuestTravelerManager';
+import FlightSearch from '../../../FlightSearch';
+import FlightSearchModal from '../../../FlightSearchModal';
+import HotelSearchModal from '../../../HotelSearchModal';
+import TripConflictModal from '../../../TripConflictModal';
 import { getAirportsByTravelMode, formatAirportOption } from '../../../shared/airports';
 
 interface CreateTripFormProps {
